@@ -10,8 +10,7 @@ export function colorize(result, { level }) {
     const styles = color ? `color: ${ color }` : '';
 
     if (styles) {
-        result.unshift('%c');
-        result = [result.join(''), styles];
+        result = [`%c${ result.join(' ') }`, styles];
     }
 
     return result;
@@ -28,7 +27,7 @@ export function iconize(result, { level }) {
     const { label } = level;
 
     if (label) {
-        result.unshift(`${ label } `);
+        result.unshift(`${ label }`);
     }
 
     return result;
