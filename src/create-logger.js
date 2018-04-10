@@ -23,12 +23,12 @@ export function createLogger(target, config, instance) {
                 }
 
                 if (proxy) {
-                    const args = middlewares.reduce((acc, m) => m({ level, config, instance }), []);
+                    const args = middlewares.reduce((acc, m) => m(acc, { level, config, instance }), []);
                     return level.fn.bind(logger, ...args);
                 }
 
                 return function(...statements) {
-                    const args = middlewares.reduce((acc, m) => m({ level, config, instance, statements }), []);
+                    const args = middlewares.reduce((acc, m) => m(acc, { level, config, instance, statements }), []);
                     level.fn.call(logger, ...args);
                 };
             },
