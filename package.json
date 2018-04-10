@@ -1,0 +1,44 @@
+{
+  "name": "@dreipol/abstract-log",
+  "version": "0.0.3",
+  "description": "",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "prepare": "npm run build && npm test",
+    "lint": "eslint src/index.js test/test.js rollup.config.js",
+    "build": "rollup -c",
+    "test": "npm run lint && mocha test/runner"
+  },
+  "files": [
+    "dist/index.js",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreipol/abstract-log.git"
+  },
+  "keywords": [
+    "log",
+    "debug"
+  ],
+  "author": "Rouven Bühlmann <rouven.buehlmann@dreipol.ch> (http://dreipol.ch)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreipol/abstract-log/issues"
+  },
+  "homepage": "https://github.com/dreipol/abstract-log#readme",
+  "devDependencies": {
+    "@dreipol/eslint-config": "^3.0.0",
+    "babel-eslint": "^8.0.1",
+    "chai": "^4.1.2",
+    "chai-spies": "^1.0.0",
+    "eslint": "^4.4.0",
+    "mocha": "^4.0.1",
+    "rollup": "^0.52.0",
+    "rollup-plugin-buble": "^0.18.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^2.0.0"
+  },
+  "dependencies": {}
+}
