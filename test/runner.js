@@ -5,5 +5,5 @@ chai.use(require('chai-spies'));
 global.chai = chai;
 
 describe('abstract-log', () => {
-    require('./tests');
+    require('./abstract-log.spec');
 });

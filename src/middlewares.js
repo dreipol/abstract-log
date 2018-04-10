@@ -10,8 +10,8 @@ export function colorize(result, { level }) {
     const styles = color ? `color: ${ color }` : '';
 
     if (styles) {
-        result = result.unshift('%c').join('');
-        result.push(styles);
+        result.unshift('%c');
+        result = [result.join(''), styles];
     }
 
     return result;
