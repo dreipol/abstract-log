@@ -6,7 +6,7 @@
   "jsnext:main": "src/index.js",
   "scripts": {
     "prepare": "npm run build && npm test",
-    "lint": "eslint src/index.js test/test.js rollup.config.js",
+    "lint": "eslint ./src ./test/runner.js ./rollup.config.js",
     "build": "rollup -c",
     "test": "npm run lint && mocha test/runner"
   },
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/dreipol/abstract-log#readme",
   "devDependencies": {
-    "@dreipol/eslint-config": "^3.0.0",
+    "@dreipol/eslint-config": "^5.0.0",
     "babel-eslint": "^8.0.1",
     "chai": "^4.1.2",
     "chai-spies": "^1.0.0",

@@ -7,13 +7,13 @@ function noop() {
 
 /**
  * Define loggers for vue instances
- * @param {Object} target - The host object
- * @param {Object} config - A config object for the logger instance
- * @param {Object} instance - A vue component instance that is allowed to influence part of the logging string
- * @return {Function} The original target object enhanced with a logger instance
+ * @param {object} target - The host object
+ * @param {object} config - A config object for the logger instance
+ * @param {object} instance - A vue component instance that is allowed to influence part of the logging string
+ * @return {function} The original target object enhanced with a logger instance
  */
 export function createLogger(target, config, instance) {
-    const { context, filter, levels, logger, middlewares, proxy } = config;
+    const { context, filter, levels, logger, middlewares, proxy } = config; // eslint-disable-line no-unused-vars
 
     return levels.reduce((host, level) => {
         return Object.defineProperty(host, level.name, {
